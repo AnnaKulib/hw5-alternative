@@ -376,6 +376,11 @@ body {
   border: 1px solid tomato;
 }
 
+.form-field:hover .form-icon,
+.form-field:focus .form-icon {
+  fill: tomato;
+}
+
 .form-field input::placeholder {
   color: rgb(206, 153, 144);
 }
