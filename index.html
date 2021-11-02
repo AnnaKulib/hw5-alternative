@@ -182,29 +182,46 @@
       </div>
       <div class="group" role="group">
         <h2 class="group-title">Тема доклада</h2>
-        <input type="checkbox" name="topic" value="html" id="html" />
-        <label for="html">HTML</label>
 
-        <input type="checkbox" name="topic" value="css" id="css" />
-        <label for="css">CSS</label>
+        <ul class="topic-options">
+          <li>
+            <input type="checkbox" name="topic" value="html" id="html" />
+            <label for="html">HTML</label>
+          </li>
 
-        <input type="checkbox" name="topic" value="js" id="js" />
-        <label for="js">JavaScript</label>
+          <li>
+            <input type="checkbox" name="topic" value="css" id="css" />
+            <label for="css">CSS</label>
+          </li>
+
+          <li>
+            <input type="checkbox" name="topic" value="js" id="js" />
+            <label for="js">JavaScript</label>
+          </li>
+        </ul>
       </div>
 
-      <div role="group">
-        <input type="radio" name="experience" value="junior" id="junior" />
-        <label for="junior">Junior</label>
-
-        <input type="radio" name="experience" value="middle" id="middle" />
-        <label for="middle">Middle</label>
-
-        <input type="radio" name="experience" value="senior" id="senior" />
-        <label for="senior">Senior</label>
+      <div role="group" class="group">
+        <h2 class="group-title">Уровень докладчика</h2>
+        <ul class="experience-options">
+          <li>
+            <input type="radio" name="experience" value="junior" id="junior" />
+            <label for="junior">Junior</label>
+          </li>
+          <li>
+            <input type="radio" name="experience" value="middle" id="middle" />
+            <label for="middle">Middle</label>
+          </li>
+          <li>
+            <input type="radio" name="experience" value="senior" id="senior" />
+            <label for="senior">Senior</label>
+          </li>
+        </ul>
       </div>
       <div class="form-field">
         <label for="date">Дата доклада</label>
         <input
+          class="date"
           type="datetime-local"
           name="data"
           id="data"
@@ -219,6 +236,7 @@
       <div class="form-field">
         <label for="comment">Оставьте комментарий</label>
         <textarea
+          class="comment"
           name="comment"
           id="comment"
           rows="10"
