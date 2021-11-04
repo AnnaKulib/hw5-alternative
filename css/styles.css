@@ -456,3 +456,48 @@ textarea {
 .comment {
   padding: 8px;
 }
+
+.form-field-surname {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.form-input-surname {
+  margin: 20px 0;
+  padding: 10px 40px;
+  font: inherit;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.form-label-surname {
+  position: absolute;
+  top: 50%;
+  left: 42px;
+  transform: translateY(-50%);
+
+  transition: transform 250ms linear;
+}
+
+.form-input-surname:focus + .form-label-surname,
+.form-input-surname:not(:placeholder-shown) + .form-label-surname {
+  transform: translateY(-40px) translateX(-42px);
+  color: red;
+}
+
+.form-input-surname:placeholder-shown {
+}
+
+.form-icon-surname {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+}
+.form-input-surname:focus ~ .form-icon-surname {
+  fill: tomato;
+}
