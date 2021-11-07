@@ -501,3 +501,35 @@ textarea {
 .form-input-surname:focus ~ .form-icon-surname {
   fill: tomato;
 }
+
+.input-checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  position: absolute;
+}
+
+.label-checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.icon-checkbox {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+
+  border: 2px solid #2a2a2a;
+  border-radius: 4px;
+}
+
+.input-checkbox:checked + .icon-checkbox {
+  border-color: transparent;
+  background-color: var(--accent-color);
+  background-image: url(../images/check.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: border-box;
+}
