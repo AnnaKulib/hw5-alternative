@@ -369,10 +369,12 @@ body {
   border: 1px solid rgba(33, 33, 33, 0.2);
   /* box-sizing: border-box; */
   border-radius: 4px;
+  /* outline: none; */
 }
 
 .form-field:hover input,
 .form-field:focus input {
+  /* outline: none; */
   border: 1px solid tomato;
 }
 
@@ -503,11 +505,22 @@ textarea {
 }
 
 .input-checkbox {
-  -webkit-appearance: none;
+  /* -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 
+  position: absolute; */
+
   position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
 
 .label-checkbox {
@@ -519,10 +532,12 @@ textarea {
   display: inline-block;
   width: 15px;
   height: 15px;
-  margin-right: 10px;
+  margin-right: 5px;
 
   border: 2px solid #2a2a2a;
   border-radius: 4px;
+
+  /* transition: scale 250ms linear; */
 }
 
 .input-checkbox:checked + .icon-checkbox {
@@ -531,5 +546,16 @@ textarea {
   background-image: url(../images/check.svg);
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: border-box;
+  background-position: center;
+  /* background-position: border-box; */
+
+  /* transform: scale(1.2); */
+}
+
+.label-checkbox-text {
+  transition: transform 300ms linear;
+}
+
+.input-checkbox:checked ~ .label-checkbox-text {
+  transform: rotate(360deg);
 }
