@@ -489,6 +489,15 @@ textarea {
   color: red;
 }
 
+/* Чтоб цвет намки не пропадал при ховере на иконку
+.form-input-wrap:hover .modal-form-input-icon {
+  fill: var(--accent-color);
+}
+
+.form-input-wrap:hover .modal-form-input {
+  border-color: var(--accent-color);
+} */
+
 .form-input-surname:placeholder-shown {
 }
 
@@ -540,6 +549,23 @@ textarea {
   /* transition: scale 250ms linear; */
 }
 
+/* .check{
+    position: relative;
+margin-right: 9px;
+border: 2px solid;
+display: inline-block;
+width: 15px;
+height: 15px;
+background-image: url(..//images/chek.svg);
+background-size: 13px 12px;
+cursor: pointer;
+border-radius: 4px;
+background-repeat: no-repeat;
+}
+.box-licence input:checked + .check{
+    background-color: var(--background-color);
+} */
+
 .input-checkbox:checked + .icon-checkbox {
   border-color: transparent;
   background-color: var(--accent-color);
@@ -547,7 +573,7 @@ textarea {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  /* background-position: border-box; */
+  background-origin: border-box;
 
   /* transform: scale(1.2); */
 }
